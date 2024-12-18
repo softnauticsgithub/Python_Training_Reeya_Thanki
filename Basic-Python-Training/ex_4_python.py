@@ -9,4 +9,9 @@ high level support for doing this and that.
 """
 first_name=input("enter your first name: ")
 last_name=input("enter your last name: ")
-print(last_name + " "+ first_name)
+first_name=first_name[::-1]
+last_name=last_name[::-1]
+print(first_name + " "+ last_name)
+
+#output
+#ayeer iknaht

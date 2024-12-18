@@ -17,8 +17,15 @@
 """
 a=int(input())
 b=int(input())
-print("Addition:",a+b)
-print("Subtraction:",a-b)
-print("Multiplication:",a*b)
-print("Floor Division:",a//b)
-print("Division:",a/b)
+print("Addition : ",a+b)
+print("Subtraction : ",a-b)
+print("Multiplication : ",a*b)
+print("Floor Division : ",a//b)
+print("Division : ",a/b)
+
+#output:
+#Addition : 7
+#Subtraction : 1
+#Multiplication : 12
+#Floor Division : 1
+#Division : 1.33
