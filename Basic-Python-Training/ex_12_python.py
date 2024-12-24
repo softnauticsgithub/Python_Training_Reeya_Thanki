@@ -24,22 +24,29 @@ Required Output Format :
     Print one line: The average of the marks obtained by the
     particular student correct to 2 decimal place.
 """
-number_of_student = int(input("Enter the number of student in range of 2 to 10 "))
-student_name_marks={}
-for i in range(number_of_student):
-    name,sub1,sub2,sub3=input("Enter the name and marks sperated by space ").split(" ")
-    if int(sub1)>100 or int(sub1)<0:
-        sub1=input("renter subject1 mark correctly ")
-    if int(sub2) > 100 or int(sub2) < 0:
-        sub1 = input("renter subject1 mark correctly ")
-    if int(sub3) > 100 or int(sub3) < 0:
-        sub1 = input("renter subject1 mark correctly ")
-student_name_marks[name] = list([sub1, sub2, sub3])
-name_of_student = input("Enter the name of the student ")
-print(student_name_marks)
-student_mark = list(student_name_marks.get(name_of_student))
-if student_mark:
-    average_marks = (int(student_mark[0]) + int(student_mark[1]) + int(student_mark[2])) / 3
-    print("average mark of %s is %0.2f" % (name_of_student, average_marks))
+n=int(input("Enter the number of Student : "))
+if n >= 2 and n <= 10 :
+    student_name_and_marks={}
+    for i in range(n):
+        name, sub1, sub2, sub3 = input().split(" ")
+        if int(sub1) >= 100 or int(sub1) <= 0:
+            sub1 = input("Please Enter mark below 100 and above 0")
+        if int(sub2) >= 100 or int(sub2) <= 0:
+            sub2 = input("Please Enter mark below 100 and above 0")
+        if int(sub3) >= 100 or int(sub3) <= 0:
+            sub3 = input("Please Enter mark below 100 and above 0")
+        s1 = int(sub1)
+        s2 = int(sub2)
+        s3 = int(sub3)
+        student_name_and_marks[name] = list([s1, s2, s3])
+        print(student_name_and_marks)
+    name = input("Enter the name of the student ")
+    for i,j in student_name_and_marks.items():
+        if name in i:
+            percent = sum(j) * 100 / 300
+            print(percent)
+            break
+    else :
+        print("Name is not Found!!")
 else:
-    print("Enter student name is not correct!")
+    print("Please enter the number in range of 2 to 10")
