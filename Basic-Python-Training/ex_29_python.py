@@ -1,9 +1,8 @@
 #Topic : BASIC PYTHON
 #Exercise Number : 29
 ##PROBLEM STATEMENT:
-# Write a Python code to check if given dummy API is responding correctly?
-# if API is responding with  employee's data then
-# print the employee's name, age and salary whose salary is 400000.
+# Write a Python code to check if given API working properly or not if working then find last name starting
+# from "f" and print first name last name and email id of user.
 # Python Version : 3.7
 """
 - If API is not responding then display the appropriate user message.
