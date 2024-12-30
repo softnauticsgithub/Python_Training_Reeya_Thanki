@@ -18,7 +18,8 @@ str_1=input()
 str_2={}
 for i in str_1:
     c=str_1.count(i)
-    if c>1:
-        str_2[i]=c
+    if i not in str_2.keys()
+    	if c>1:
+        	str_2[i]=c
 for k,v in str_2.items():
     print(k,v)
