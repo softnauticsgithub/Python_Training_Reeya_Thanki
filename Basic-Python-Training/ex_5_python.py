@@ -16,10 +16,14 @@
     - Sample Output
         abrackdabra
 """
-name=input("Enter one String:")
-index,ch=input().split(" ")
+try:
+	name=input("Enter one String:")
+	index,ch=input("Please give input seprated by a space!!").split(" ")
+except Exception as e:
+	print(e)
 index=int(index)
 x=list(name)
 x[index]=ch
 RES="".join(x)
 print(RES)
+
