@@ -16,6 +16,8 @@ except IndexError as err:
     traceback.print_exc()
     with open("Exception.txt",'w') as Exception_file:
         Exception_file.write(type(err).__name__)
+except Exception as e:
+    print(e)
 A = 4
 B= 0
 try:
@@ -24,3 +26,6 @@ except ZeroDivisionError as err:
     traceback.print_exc()
     with open("Exception.txt",'a+') as Exception_file:
         Exception_file.write(type(err).__name__)
+except Exception as e:
+    print(e)
+    
