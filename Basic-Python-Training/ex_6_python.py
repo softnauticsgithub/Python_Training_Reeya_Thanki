@@ -24,13 +24,7 @@
         True
 """
 name=input()
-for char in name:
-    k=char.isalnum()
-    if k is True:
-        print("true")
-        break
-if k!=1:
-    print("false")
+print(name.isalnum())
 for char in name:
     k=char.isalpha()
     if k is True:
@@ -59,3 +53,4 @@ for char in name:
         break
 if k!=1:
     print("false")
+    
