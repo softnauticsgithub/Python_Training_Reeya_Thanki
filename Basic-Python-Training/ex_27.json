@@ -1,0 +1,1 @@
+{"port": "/dev/ttyO1", "bud-rate": 4, "parity": "odd", "stop-bit": 3, "time-out": 4.5, "data-bit": 7}
