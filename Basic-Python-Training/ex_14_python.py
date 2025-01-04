@@ -17,29 +17,30 @@
     Sample Input3: k4
     Sample Output3: {"k5": {"k6": "v6"}
 """
-def get_values(input_dic,key):
-    '''
-    here i define function called fun to fetch the key value
-    '''
-    for k,value in input_dic.items():
-        if k==key:
-            return value
-        elif type(value)==dict:
-             f=get_values(value,key)
-             if f is not None:
-                return f
-input_dict = {"k1": "v1",
+input_dict1 = {"k1": "v1",
              "k2": {"k3": "v3"},
              "k4": {"k5": {"k6": "v6"}}
              }
-key=input()
-print(get_values(input_dict,key))
 
-# keys=["k1","k2","k3","k4","k5","k6"]
-# current=input_dict
-# for key in keys:
-#     current=current.get(key,{})
-# print(current)
-# key=input()
-# x=input_dict[key]
-# print(x)
+temporary_dict = {}
+def recursive_dict(input_dict):
+    """ This function will recursively check for the available dictionaries at the place of values
+    inside the given dictionary.
+
+        args :- dictionary containing nested dictionaries as their values.
+        return :- dictionary that contains all nested dictionaries separately.
+    """
+    for key, value in input_dict.items():
+        temporary_dict[key] = value
+        if isinstance(value, dict):
+            recursive_dict(input_dict[key])
+    return temporary_dict
+
+final_dict = recursive_dict(input_dict1)
+try:
+    keys = input("Enter the key : ")
+    print(keys,":",final_dict[keys])
+except KeyError:
+    print("Invalid Key...")
+
+
