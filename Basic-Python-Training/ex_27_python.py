@@ -12,6 +12,7 @@
     parameters. what is baud rate, parity and etc.
 """
 import argparse
+import json
 parser = argparse.ArgumentParser()
 parser.add_argument("--port", type=str)
 parser.add_argument("--budRate", type=int)
