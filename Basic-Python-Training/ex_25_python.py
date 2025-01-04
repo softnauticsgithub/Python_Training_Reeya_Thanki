@@ -12,6 +12,7 @@ i.e. permission, owner, file created and etc. like we have output for ls -l
     - Make sure your code output must have intuitive logs for the users
 NOTE: Use OS module for performing various operations.
 """
+import os
 current_dir = os.getcwd()
 archive_dir = os.path.join(current_dir, "python_files(.py files)")
 if not os.path.exists(archive_dir):
