@@ -7,8 +7,6 @@
     Sample Output :
     Current date and time : 2014-07-05 14:34:14
 """
-from datetime import date, datetime
-today_curr=date.today()
-time_curr=datetime.now()
-curr_time=time_curr.strftime("%H:%M:%S")
-print(today_curr,curr_time)
+a = 9
+if (a) :
+    print(a)
